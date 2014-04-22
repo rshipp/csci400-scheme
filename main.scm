@@ -9,7 +9,6 @@
 
 (define (program-loop)
     (begin
-        (if 
         (display (read-line))
         (newline)
         (program-loop)))

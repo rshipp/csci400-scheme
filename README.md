@@ -9,4 +9,4 @@ Guile](https://www.gnu.org/software/guile/) Scheme implementation.
 
 The following features of Scheme are used:
 
-* [feature name](filename.scm#LINENUMBER)
+* [tail call optimization](main.scm)

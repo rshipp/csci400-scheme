@@ -7,8 +7,17 @@
 (define (main args)
     (program-loop))
 
+(define (eval-input input)
+    (if (not (eof-object? input))
+        (begin
+            (display input)
+            (newline))
+        (begin
+            (display 'goodbye!)
+            (newline)
+            (quit))))
+
 (define (program-loop)
     (begin
-        (display (read-line))
-        (newline)
+        (eval-input (read-line))
         (program-loop)))

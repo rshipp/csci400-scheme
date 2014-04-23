@@ -2,15 +2,13 @@
 -e main -s
 !#
 
-(import (ice-9 rdelim))
-
 (define (main args)
     (program-loop))
 
 (define (eval-input input)
     (if (not (eof-object? input))
         (begin
-            (display input)
+            (write (eval input (current-module)))
             (newline))
         (begin
             (display 'goodbye!)
@@ -19,5 +17,5 @@
 
 (define (program-loop)
     (begin
-        (eval-input (read-line))
+        (eval-input (read))
         (program-loop)))

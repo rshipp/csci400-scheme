@@ -16,6 +16,5 @@
             (quit))))
 
 (define (program-loop)
-    (begin
-        (eval-input (read))
-        (program-loop)))
+    (eval-input (read))
+    (program-loop))

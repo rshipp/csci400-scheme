@@ -9,8 +9,9 @@ Guile](https://www.gnu.org/software/guile/) Scheme implementation.
 
 The following features of Scheme are used:
 
-* [exception handling](main.scm#L9-L18)
-* [hygenic macros](main.scm#L9)
-* [lambda expressions](main.scm#L13)
-* [tail call optimization](main.scm)
-* [functions](main.scm)
+* [exception handling](main.scm#L11-L20)
+* [hygenic macros](main.scm#L11)
+* [lambda expressions](main.scm#L15)
+* [loading resources from local files](main.scm#L8)
+* [tail call optimization](main.scm#L44)
+* [functions](main.scm#L23-L44)

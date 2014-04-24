@@ -12,6 +12,7 @@ The following features of Scheme are used:
 * [closures](functions.scm#L16-17)
 * [cond](functions.scm#L11) (conditional expression)
 * [exception handling](main.scm#L11-L20)
+    ([SO](https://stackoverflow.com/questions/16493079/how-to-implement-a-try-catch-block-in-scheme))
 * [functions](main.scm#L23-L45)
 * [hygenic macros](main.scm#L11)
 * [if expression](main.scm#L31)

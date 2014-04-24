@@ -5,10 +5,14 @@
 (define (main args)
     (program-loop))
 
+(define (write-if-specified input)
+    (if (not (unspecified? input))
+        (write input)))
+
 (define (eval-input input)
     (if (not (eof-object? input))
         (begin
-            (write (eval input (current-module)))
+            (write-if-specified (eval input (current-module)))
             (newline))
         (begin
             (display 'goodbye!)

@@ -75,3 +75,10 @@
             (append (quicksort (car split))       ;; recursively sort first half
                     (list (car num-list))         ;; package pivot as a list
                     (quicksort (cadr split))))))  ;; recursively sort second half
+                    
+
+;Currying and Closure example with a decrementer
+(define sub(a)
+    (lambda (b) (- a b)))
+    
+(define dec(sub 1))

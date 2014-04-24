@@ -8,15 +8,15 @@
 
 ; Exception handling
 (define-syntax try
-  (syntax-rules (catch)
-    ((_ body (catch catcher))
-     (call-with-current-continuation
-      (lambda (exit)
-        (with-exception-handler
-         (lambda (condition)
-           catcher
-           (exit condition))
-         (lambda () body)))))))
+    (syntax-rules (catch)
+        ((_ body (catch catcher))
+         (call-with-current-continuation
+            (lambda (exit)
+                (with-exception-handler
+                 (lambda (condition)
+                     catcher
+                     (exit condition))
+                 (lambda () body)))))))
 
 ; Math functions
 

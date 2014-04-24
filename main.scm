@@ -2,7 +2,6 @@
 -e main -s
 !#
 
-
 (import (rnrs base)            ; define-syntax
         (rnrs exceptions))     ; get `with-exception-handler`
 

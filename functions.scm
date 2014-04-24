@@ -56,6 +56,17 @@
                 (* root root)
                 (* root root base)))))
 
+; Partition
+; From http://see.stanford.edu/materials/icsppcs107/30-Scheme-Functions.pdf
+(define (partition pivot num-list)
+    (if (null? num-list) '(() ())
+        (let ((split-of-rest (partition pivot (cdr num-list))))
+            (if (< (car num-list) pivot)
+                (list (cons (car num-list) (car split-of-rest))
+                    (cadr split-of-rest))
+                (list (car split-of-rest) (cons (car num-list)
+                    (car (cdr split-of-rest))))))))
+
 ; Quick sort
 ; From http://see.stanford.edu/materials/icsppcs107/30-Scheme-Functions.pdf
 (define (quicksort num-list)

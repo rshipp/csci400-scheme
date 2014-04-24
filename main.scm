@@ -2,18 +2,40 @@
 -e main -s
 !#
 
+
+(import (rnrs base)            ; define-syntax
+        (rnrs exceptions))     ; get `with-exception-handler`
+
 (define (main args)
     (program-loop))
 
+; Exception handling
+(define-syntax try
+  (syntax-rules (catch)
+    ((_ body (catch catcher))
+     (call-with-current-continuation
+      (lambda (exit)
+        (with-exception-handler
+         (lambda (condition)
+           catcher
+           (exit condition))
+         (lambda () body)))))))
+
+; Math functions
+
+
+
+; Main calculator loop
 (define (write-if-specified input)
     (if (not (unspecified? input))
         (write input)))
 
 (define (eval-input input)
     (if (not (eof-object? input))
-        (begin
-            (write-if-specified (eval input (current-module)))
-            (newline))
+            (try (begin
+                (write-if-specified (eval input (current-module)))
+                (newline))
+            (catch (display "invalid syntax\n")))
         (begin
             (display 'goodbye!)
             (newline)

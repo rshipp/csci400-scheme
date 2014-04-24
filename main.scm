@@ -5,6 +5,8 @@
 (import (rnrs base)            ; define-syntax
         (rnrs exceptions))     ; get `with-exception-handler`
 
+(load "functions.scm")
+
 ; Exception handling
 (define-syntax try
     (syntax-rules (catch)
@@ -16,10 +18,6 @@
                      catcher
                      (exit condition))
                  (lambda () body)))))))
-
-; Math functions
-
-
 
 ; Main calculator loop and helper functions
 (define (main args)

@@ -9,6 +9,7 @@ Guile](https://www.gnu.org/software/guile/) Scheme implementation.
 
 The following features of Scheme are used:
 
+* [closures](functions.scm#L16-17)
 * [cond](functions.scm#L11) (conditional expression)
 * [exception handling](main.scm#L11-L20)
 * [hygenic macros](main.scm#L11)

@@ -6,9 +6,6 @@
 (import (rnrs base)            ; define-syntax
         (rnrs exceptions))     ; get `with-exception-handler`
 
-(define (main args)
-    (program-loop))
-
 ; Exception handling
 (define-syntax try
   (syntax-rules (catch)
@@ -26,6 +23,9 @@
 
 
 ; Main calculator loop
+(define (main args)
+    (program-loop))
+
 (define (write-if-specified input)
     (if (not (unspecified? input))
         (write input)))

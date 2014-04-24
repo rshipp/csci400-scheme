@@ -11,4 +11,6 @@ The following features of Scheme are used:
 
 * [exception handling](main.scm#L9-L18)
 * [hygenic macros](main.scm#L9)
+* [lambda expressions](main.scm#L13)
 * [tail call optimization](main.scm)
+* [functions](main.scm)

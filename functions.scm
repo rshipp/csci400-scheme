@@ -49,9 +49,9 @@
 
 ; Power funtion
 ; From http://see.stanford.edu/materials/icsppcs107/30-Scheme-Functions.pdf
-(define (pwr base exponent)
+(define (^ base exponent)
     (if (zero? exponent) 1
-        (let ((root (pwr base (quotient exponent 2))))
+        (let ((root (^ base (quotient exponent 2))))
             (if (zero? (remainder exponent 2))
                 (* root root)
                 (* root root base)))))

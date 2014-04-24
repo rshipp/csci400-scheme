@@ -12,6 +12,7 @@ The following features of Scheme are used:
 * [cond](functions.scm#L11) (conditional expression)
 * [exception handling](main.scm#L11-L20)
 * [hygenic macros](main.scm#L11)
+* [if expression](main.scm#L31)
 * [lambda expressions](main.scm#L15)
 * [loading resources from local files](main.scm#L8)
 * [REPL](main.scm#L30-L45) (read-eval-print loop)

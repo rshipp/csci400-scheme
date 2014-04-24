@@ -32,7 +32,8 @@
 
 (define (eval-input input)
     (if (not (eof-object? input))
-            (try (begin
+        (try
+            (begin
                 (write-if-specified (eval input (current-module)))
                 (newline))
             (catch (display "invalid syntax\n")))

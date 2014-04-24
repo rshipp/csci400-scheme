@@ -18,6 +18,7 @@ The following features of Scheme are used:
 * [lambda expressions](main.scm#L15)
 * [let expression](functions.scm#L54)
 * [loading resources from local files](main.scm#L8)
+* [list operations](functions.scm#L)
 * [REPL](main.scm#L30-L45) (read-eval-print loop)
 * [symbols](functions.scm#L13)
 * [tail call optimization](main.scm#L45)

@@ -55,3 +55,12 @@
             (if (zero? (remainder exponent 2))
                 (* root root)
                 (* root root base)))))
+
+; Quick sort
+; From http://see.stanford.edu/materials/icsppcs107/30-Scheme-Functions.pdf
+(define (quicksort num-list)
+    (if (<= (length num-list) 1) num-list
+        (let ((split (partition (car num-list) (cdr num-list))))
+            (append (quicksort (car split))       ;; recursively sort first half
+                    (list (car num-list))         ;; package pivot as a list
+                    (quicksort (cadr split))))))  ;; recursively sort second half

@@ -78,7 +78,7 @@
                     
 
 ;Currying and Closure example with a decrementer
-(define sub(a)
-    (lambda (b) (- a b)))
+(define (sub a)
+    (lambda (b) (- b a)))
     
-(define dec(sub 1))
+(define dec (sub 1))

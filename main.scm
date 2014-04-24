@@ -22,7 +22,7 @@
 
 
 
-; Main calculator loop
+; Main calculator loop and helper functions
 (define (main args)
     (program-loop))
 

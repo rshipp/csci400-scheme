@@ -40,5 +40,6 @@
             (quit))))
 
 (define (program-loop)
+    (display "> ")
     (eval-input (read))
     (program-loop))

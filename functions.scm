@@ -41,3 +41,8 @@
           (else (list a '* b))))
 (define fact1 car)
 (define fact2 caddr)
+
+; Extremely simple factorial function
+(define (! n)
+    (if (<= n 1) 1
+        (* n (! (- n 1)))))

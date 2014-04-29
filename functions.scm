@@ -7,12 +7,12 @@
 
 ; Calculate derivatives
 ; From http://www.javaist.com/blog/2008/11/05/derivative-calculator-in-scheme/
+; EX: (deriv '((x * x) + ((b * x) + c))  'x) => ((x+x)+b)
 (define (deriv exp var)
     (cond
         ((constant? exp) 0)
         ((variable? exp)
-         (if (same-var? exp var)
-             1 0))
+         (if (same-var? exp var) 1 0))
         ((sum? exp) (make-sum (deriv (term1 exp) var)
                               (deriv (term2 exp) var)))
         ((product? exp)
@@ -42,7 +42,7 @@
 (define fact1 car)
 (define fact2 caddr)
 
-; Extremely simple factorial function
+; factorial function
 (define (! n)
     (if (<= n 1) 1
         (* n (! (- n 1)))))
@@ -75,10 +75,35 @@
             (append (quicksort (car split))       ;; recursively sort first half
                     (list (car num-list))         ;; package pivot as a list
                     (quicksort (cadr split))))))  ;; recursively sort second half
-                    
+
 
 ;Currying and Closure example with a decrementer
 (define (sub a)
     (lambda (b) (- b a)))
     
 (define dec (sub 1))
+
+
+; math functions / higher order functions / lambda expressions
+;; apply a trig funx to a list
+(define sin-OfList
+    (lambda (ls)
+        (map (lambda (x) (sin x)) ls)
+
+(define cos-OfList
+    (lambda (ls)
+        (map (lambda (x) (cos x)) ls)
+
+(define tan-OfList
+    (lambda (ls)
+        (map (lambda (x) (tan x)) ls
+
+; another way to calculate a derivative
+(define (der f h)
+ (lambda (x)
+ (/ (- (f(+ x h)) (f x)) h)))  
+
+
+
+
+

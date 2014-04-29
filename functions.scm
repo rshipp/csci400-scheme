@@ -88,22 +88,17 @@
 ;; apply a trig funx to a list
 (define sin-OfList
     (lambda (ls)
-        (map (lambda (x) (sin x)) ls)
+        (map (lambda (x) (sin x)) ls)))
 
 (define cos-OfList
     (lambda (ls)
-        (map (lambda (x) (cos x)) ls)
+        (map (lambda (x) (cos x)) ls)))
 
 (define tan-OfList
     (lambda (ls)
-        (map (lambda (x) (tan x)) ls
+        (map (lambda (x) (tan x)) ls)))
 
 ; another way to calculate a derivative
 (define (der f h)
  (lambda (x)
- (/ (- (f(+ x h)) (f x)) h)))  
-
-
-
-
-
+ (/ (- (f(+ x h)) (f x)) h)))
